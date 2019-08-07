@@ -1,0 +1,210 @@
+<!-- <h1 class='bg bg-light'>DESIGNATIONS</h1>
+<h3>Search Here</h3><input placeholder="Search Here" name="n1" #f type="text" (keyup)="search(f.value)">
+<div class='container'>
+
+
+
+
+    <button class="btn btn-lg btn-warning text-white float-right" (click)="open(content)">Add new Designation</button>
+  </div>
+  <table class='table'>
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Description</td>
+        <td>Action</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of arr">
+        <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+        <td>
+          <button class="btn btn-secondary"(click)="open(content)" >Edit</button> |
+
+          <button class="btn btn-danger" (click)="onDesigDelete(item)" ><span class="glyphicon glyphicon-trash">Delete</span></button></td>
+      </tr>
+    </tbody>
+
+  <ng-template #content let-modal>
+
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title" >Add/Edit Designation</h4>
+      <button type="button" class="close bg bg-danger" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+
+      <form>
+        <table class="table">
+          <tr>
+          <td>
+        <div class="form-group">
+          <label for="designation">Designation</label>
+          <div class="input-group">
+            <input name="designation" class="form-control" [(ngModel)]="name" placeholder="Name" name="name">
+            <div class="input-group-append">
+
+            </div>
+          </div>
+        </div>
+      </td>
+    <td>
+
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <div class="input-group">
+            <input name="description" class="form-control" [(ngModel)]="description"  placeholder="Description" name="description">
+            <div class="input-group-append">
+
+            </div>
+          </div>
+        </div>
+      </td>
+      </tr>
+      </table>
+
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)='onAddDesigClick()'>Save</button>
+
+        <button type="reset" class="btn btn-outline-dark" aria-label="cancel" (click)="modal.dismiss('Cross click')">cancel</button>
+      </div>
+
+  </ng-template>
+
+
+
+  -->
+  <h1 class='bg bg-light'>DESIGNATIONS</h1>
+<h3>Search Here</h3><input placeholder="Search Here" name="n1" #f type="text" (keyup)="search(f.value)">
+<div class='container'>
+
+
+
+
+
+    <button class="btn btn-lg btn-warning text-white float-right" (click)="open(content)">Add new Designation</button>
+  </div>
+  <table class='table'>
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Description</td>
+        <td>Action</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of arr">
+        <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+        <td>
+          <button class="btn btn-secondary"(click)="open(content)" >Edit</button> |
+
+          <button class="btn btn-danger" (click)="onDesigDelete(item)" ><span class="glyphicon glyphicon-trash">Delete</span></button></td>
+      </tr>
+    </tbody>
+
+  <ng-template #content let-modal>
+
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title" >Add/Edit Designation</h4>
+      <button type="button" class="close bg bg-danger" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+
+      <form>
+        <table class="table">
+          <tr>
+          <td>
+        <div class="form-group">
+          <label for="designation">Designation</label>
+          <div class="input-group">
+            <input name="designation" class="form-control" [(ngModel)]="name" placeholder="Name" name="name">
+            <div class="input-group-append">
+
+            </div>
+          </div>
+        </div>
+      </td>
+    <td>
+
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <div class="input-group">
+            <input name="description" class="form-control" [(ngModel)]="description"  placeholder="Description" name="description">
+            <div class="input-group-append">
+
+            </div>
+          </div>
+        </div>
+      </td>
+      </tr>
+      </table>
+
+      </form>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)='onAddDesigClick()'>Submit</button>
+      <button type="reset" class="btn btn-outline-dark" aria-label="cancel" (click)="modal.dismiss('Cross click')">cancel</button>
+      <ng-template #content let-modal>
+
+
+          <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title" >Edit Designation</h4>
+            <button type="button" class="close bg bg-danger" aria-label="Close" (click)="modal.dismiss('Cross click')">
+              <span aria-hidden="true">Close</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <form>
+              <table class="table">
+                <tr>
+                <td>
+              <div class="form-group">
+                <label for="designation">Designation</label>
+                <div class="input-group">
+                  <input name="designation" class="form-control" [(ngModel)]="name" placeholder="Name" name="name">
+                  <div class="input-group-append">
+
+                  </div>
+                </div>
+              </div>
+            </td>
+          <td>
+
+
+              <div class="form-group">
+                <label for="description">Description</label>
+                <div class="input-group">
+                  <input name="description" class="form-control" [(ngModel)]="description"  placeholder="Description" name="description">
+                  <div class="input-group-append">
+
+                  </div>
+                </div>
+              </div>
+            </td>
+            </tr>
+            </table>
+
+            </form>
+          </div>
+
+          <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-outline-dark" (click)='EditItem()'>EDIT</button> -->
+
+
+        <button type="reset" class="btn btn-outline-dark" aria-label="cancel" (click)="modal.dismiss('Cross click')">cancel</button>
+      </div>
+  </ng-template>
+
+
+
